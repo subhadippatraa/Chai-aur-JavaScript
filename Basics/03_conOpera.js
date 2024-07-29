@@ -22,3 +22,17 @@ console.log( pureNum);
     // " "=>false;
     // "s"=>true //Not-empty
 
+
+
+    /************** Operations       ***************** */
+
+
+let num1="49";
+let num2=51
+let num3=num1+num2
+
+// console.log(num3); //did a concatination
+
+
+console.log(1+3+"6")
+
