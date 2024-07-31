@@ -4,5 +4,5 @@
 })();
 
 (()=>{
-    console.log("patra") //unNamed iffe
+    console.log("Patra") //unNamed iffe
 })()
