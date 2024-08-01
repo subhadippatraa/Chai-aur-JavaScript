@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Last</title>
+    <style>
+        * {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Last video of DOM manipulation</h1>
+    <div>
+        <ul class="language">
+            <li>Python</li>
+
+            <li>JavaScript</li>
+        </ul>
+    </div>
+</body>
+<script>
+    function addLanguage(LangName) {  // A time consuming process
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `${LangName}`
+        document.querySelector('.language').appendChild(listItem)
+
+    }
+    addLanguage("Java");
+    addLanguage("C++");
+
+    //More OPtimal WAY
+    function addOptimal(LangName){
+        const listItem=document.createElement('li');
+        const addText=document.createTextNode(LangName);
+        listItem.appendChild(addText)
+        document.querySelector('.language').appendChild(listItem)
+    }
+
+    addOptimal("C#")
+
+    //Editing
+
+    const editLand=document.querySelector("li:nth-child(3)")
+    // editLand.innerHTML="Swift"
+
+    const newLang=document.createElement('li');
+    newLang.textContent="Kuch Ve";
+    editLand.replaceWith(newLang)
+    
+
+    //removal
+
+    const lastLang=document.querySelector('li:last-child')
+    // console.log(lastLang)
+    lastLang.remove()
+
+
+
+
+
+</script>
+
+</html>
